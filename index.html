@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sternik - symulator FPV – Aplikacja szkoleniowa</title>
-  <meta name="description" content="Sternik - symulator FPV – edukacyjny symulator żeglugi śródlądowej na system Android.">
+  <meta name="description" content="Sternik - symulator FPV – edukacyjny symulator żeglugi śródlądowej na system Android. 128 sytuacji, 73 znaki, Kompendium i Quiz.">
   <style>
     :root {
       --bg: #071426;
@@ -24,7 +24,7 @@
       min-height: 100vh;
     }
     .container {
-      max-width: 860px;
+      max-width: 880px;
       margin: 0 auto;
       padding: 40px 20px;
     }
@@ -44,7 +44,7 @@
     h1 {
       color: var(--cyan);
       font-size: 2rem;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.4px;
     }
     .subtitle {
       color: #cbd5e1;
@@ -67,9 +67,32 @@
       font-size: 0.85rem;
       font-weight: 600;
     }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .stat-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 12px;
+      text-align: center;
+    }
+    .stat-num {
+      color: var(--gold);
+      font-size: 1.55rem;
+      font-weight: 800;
+      display: block;
+    }
+    .stat-label {
+      color: #cbd5e1;
+      font-size: 0.85rem;
+    }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 16px;
       margin-bottom: 24px;
     }
@@ -129,7 +152,7 @@
 <body>
   <div class="container">
     <section class="hero">
-      <svg class="logo" viewBox="0 0 108 108" xmlns="http://www.w3.org/2000/svg" aria-label="Logo Sternik FPV">
+      <svg class="logo" viewBox="0 0 108 108" xmlns="http://www.w3.org/2000/svg" aria-label="Logo Sternik - symulator FPV">
         <circle cx="54" cy="54" r="50" fill="#0A192F" stroke="#29B6F6" stroke-width="2"/>
         <circle cx="54" cy="54" r="24" fill="none" stroke="#FFCA28" stroke-width="3.5"/>
         <path d="M54,26 L70,60 L54,54 L38,60 Z" fill="#FFFFFF"/>
@@ -137,10 +160,10 @@
         <path d="M28,69 Q41,62 54,69 T80,69" fill="none" stroke="#29B6F6" stroke-width="3.2" stroke-linecap="round"/>
         <path d="M33,76 Q43,71 54,76 T75,76" fill="none" stroke="#81D4FA" stroke-width="2.4" stroke-linecap="round"/>
       </svg>
-      <h1>Sternik FPV</h1>
+      <h1>Sternik - symulator FPV</h1>
       <p class="subtitle">Aplikacja szkoleniowa dla żeglarzy i motorowodniaków śródlądowych</p>
       <div class="badge-row">
-        <span class="badge">Wersja 2.0 • Android</span>
+        <span class="badge">Wersja 3.0 • Android</span>
         <span class="badge">Autor: Michał Dudek</span>
         <span class="badge">100% Offline • Bez reklam</span>
       </div>
@@ -150,36 +173,55 @@
       </div>
     </section>
 
+    <section class="stats">
+      <div class="stat-box">
+        <span class="stat-num">128</span>
+        <span class="stat-label">sytuacji nawigacyjnych</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">73</span>
+        <span class="stat-label">wektorowe znaki i pławy</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">81</span>
+        <span class="stat-label">haseł w Kompendium</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">Noc / Mgła</span>
+        <span class="stat-label">światła i sygnały dźwiękowe</span>
+      </div>
+    </section>
+
     <div class="grid">
       <div class="card">
         <h2>Symulator FPV z dziobu łodzi</h2>
-        <p>Steruj małym statkiem o napędzie mechanicznym w widoku pierwszej perspektywy. Reaguj manetką gazu, sterem, sygnałami dźwiękowymi i sprzętem ratunkowym na <strong>20 sytuacji</strong> nawigacyjnych w górę i w dół rzeki, w tym śluzowanie oraz żeglugę nocną według świateł nawigacyjnych.</p>
+        <p>Steruj małym statkiem o napędzie mechanicznym w widoku pierwszej perspektywy. Reaguj manetką gazu, sterem, sygnałami dźwiękowymi i kołem ratunkowym na losowo układane sytuacje w górę i w dół rzeki: od bramki z pław, krzyży brzegowych i śluzowania po żeglugę w gęstej mgle oraz w nocy według świateł nawigacyjnych.</p>
       </div>
       <div class="card">
-        <h2>Tryby nauki i egzaminu</h2>
+        <h2>Tryby nauki, maratonu i quizu</h2>
         <ul>
-          <li><strong>Rejs szkoleniowy</strong> – podpowiedzi na żywo i uzasadnienie prawne po każdym manewrze.</li>
-          <li><strong>Rejs egzaminacyjny</strong> – sprawdzenie wiedzy bez podpowiedzi z raportem końcowym.</li>
-          <li><strong>Quiz znaków i przepisów</strong> – losowe fiszki egzaminacyjne.</li>
-          <li><strong>Kompendium (34 pozycje)</strong> – katalog 28 wektorowych znaków i pław z filtrami.</li>
+          <li><strong>Rejs szkoleniowy (losowe 20 ze 128)</strong> – podpowiedzi na żywo i podstawa prawna po każdym manewrze.</li>
+          <li><strong>Rejs egzaminacyjny (losowe 20 ze 128)</strong> – próba bez podpowiedzi z raportem końcowym.</li>
+          <li><strong>Pełny Maraton (wszystkie 128 losowo)</strong> oraz lista z filtrami kategorii do ćwiczenia wybranej sytuacji.</li>
+          <li><strong>Quiz (15 pytań) i Kompendium (81 wpisów)</strong> – pełen przegląd znaków A–E, granic szlaku oraz znaków kardynalnych (N, E, S, W).</li>
         </ul>
       </div>
     </div>
 
     <div class="card" style="margin-bottom: 24px;">
       <h2>Podstawa prawna symulacji</h2>
-      <p>Wszystkie manewry, znaki oraz zasady pierwszeństwa opracowano na podstawie obowiązujących polskich przepisów: <strong>Ustawy z dnia 21 grudnia 2000 r. o żegludze śródlądowej</strong> oraz <strong>Rozporządzenia Ministra Infrastruktury z dnia 28 kwietnia 2003 r.</strong> w sprawie przepisów żeglugowych na śródlądowych drogach wodnych.</p>
+      <p>Wszystkie manewry, znaki, sygnały dźwiękowe, światła oraz zasady pierwszeństwa opracowano na podstawie obowiązujących polskich przepisów: <strong>Ustawy z dnia 21 grudnia 2000 r. o żegludze śródlądowej</strong> oraz <strong>Rozporządzenia Ministra Infrastruktury z dnia 28 kwietnia 2003 r.</strong> w sprawie przepisów żeglugowych na śródlądowych drogach wodnych (wraz z Załącznikami nr 4, 6, 7 i 8).</p>
     </div>
 
     <div class="card" id="kontakt">
-      <h2>Kontakt i wsparcie techniczne</h2>
-      <p>Masz pytania dotyczące działania aplikacji, zauważyłeś błąd lub chcesz zgłosić sugestię nowej sytuacji?</p>
-      <p style="margin-top: 8px;"><strong>Autor / Wydawca:</strong> Michał Dudek<br>
+      <h2>O autorze i wsparcie techniczne</h2>
+      <p>Aplikacja powstała z pasji do wody, żeglugi śródlądowej oraz muzyki żeglarskiej — w zakładce <em>Od autora</em> wewnątrz aplikacji możesz również przejść do autorskiej szanty żeglarskiej w serwisie YouTube.</p>
+      <p style="margin-top: 10px;"><strong>Autor / Wydawca:</strong> Michał Dudek<br>
       <strong>E-mail wsparcia:</strong> <a href="mailto:mickanovi@wp.pl" style="color: #29b6f6;">mickanovi@wp.pl</a></p>
     </div>
 
     <footer>
-      <p>&copy; 2026 Michał Dudek – Sternik FPV (Aplikacja szkoleniowa)</p>
+      <p>&copy; 2026 Michał Dudek – Sternik - symulator FPV (Aplikacja szkoleniowa)</p>
       <p style="margin-top: 6px;">
         <a href="polityka-prywatnosci.html">Polityka prywatności (Privacy Policy)</a>
       </p>
