@@ -71,7 +71,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 12px;
-      margin-bottom: 24px;
+      margin-bottom: 28px;
     }
     .stat-box {
       background: var(--card);
@@ -89,6 +89,46 @@
     .stat-label {
       color: #cbd5e1;
       font-size: 0.85rem;
+    }
+    .gallery-section {
+      margin-bottom: 28px;
+    }
+    .gallery-title {
+      color: var(--cyan);
+      font-size: 1.3rem;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+    .shot {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 10px;
+      text-align: center;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+    .shot:hover {
+      transform: translateY(-3px);
+      border-color: var(--cyan);
+    }
+    .shot a { text-decoration: none; }
+    .shot img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      display: block;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .shot figcaption {
+      margin-top: 8px;
+      color: #cbd5e1;
+      font-size: 0.86rem;
+      font-weight: 600;
     }
     .grid {
       display: grid;
@@ -189,6 +229,48 @@
       <div class="stat-box">
         <span class="stat-num">Noc / Mgła</span>
         <span class="stat-label">światła i sygnały dźwiękowe</span>
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <h2 class="gallery-title">Podgląd aplikacji</h2>
+      <div class="gallery">
+        <figure class="shot">
+          <a href="screen1.jpg" target="_blank">
+            <img src="screen1.jpg" alt="Ekran główny Sternik - symulator FPV" loading="lazy">
+          </a>
+          <figcaption>Menu główne i tryby rejsu</figcaption>
+        </figure>
+        <figure class="shot">
+          <a href="screen2.jpg" target="_blank">
+            <img src="screen2.jpg" alt="Symulacja z widoku dziobu łodzi" loading="lazy">
+          </a>
+          <figcaption>Widok z dziobu (FPV)</figcaption>
+        </figure>
+        <figure class="shot">
+          <a href="screen3.jpg" target="_blank">
+            <img src="screen3.jpg" alt="Przejście pod mostem i znaki skrajni" loading="lazy">
+          </a>
+          <figcaption>Mosty, jazy i znaki skrajni</figcaption>
+        </figure>
+        <figure class="shot">
+          <a href="screen4.jpg" target="_blank">
+            <img src="screen4.jpg" alt="Ocena manewru z podstawą prawną" loading="lazy">
+          </a>
+          <figcaption>Karta oceny z podstawą prawną</figcaption>
+        </figure>
+        <figure class="shot">
+          <a href="screen5.jpg" target="_blank">
+            <img src="screen5.jpg" alt="Quiz znaków i przepisów żeglugowych" loading="lazy">
+          </a>
+          <figcaption>Quiz znaków i przepisów</figcaption>
+        </figure>
+        <figure class="shot">
+          <a href="screen6.jpg" target="_blank">
+            <img src="screen6.jpg" alt="Kompendium znaków żeglugowych" loading="lazy">
+          </a>
+          <figcaption>Kompendium znaków i pław</figcaption>
+        </figure>
       </div>
     </section>
 
