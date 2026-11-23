@@ -1,4 +1,4 @@
-### Cześć, tu Michał Dudek 👋
+### Cześć, tu Michał P. Dudek 👋
 
 Tworzę hobbystycznie edukacyjne aplikacje mobilne na system Android w języku Kotlin (Jetpack Compose).
 
